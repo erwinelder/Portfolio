@@ -53,8 +53,8 @@ for (let button of document.getElementsByClassName('copy-button'))
         // make holder input visible
         holder_input.style.display = 'block';
 
-        // put link inside of href attribute of tag 'a' sibling to holder input 
-        holder_input.value = this.previousElementSibling.getAttribute('link');
+        // put link inside href attribute of tag 'a' sibling to holder input
+        holder_input.value = this.previousElementSibling.getAttribute('data-link');
 
         // copy to clipboard text inside of holder input
         holder_input.select();
@@ -74,8 +74,8 @@ for (let button of document.getElementsByClassName('copy-button'))
 
 
 function disableScrolling () {
-	var x = window.scrollX;
-	var y = window.scrollY;
+	let x = window.scrollX;
+	let y = window.scrollY;
 	window.onscroll = function() {
 		window.scrollTo(x, y);
 	};
